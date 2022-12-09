@@ -1,0 +1,397 @@
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body{
+    position: relative;
+}
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: white;
+    width: 100%;
+    z-index: 20;
+}
+.header-burger{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    left: 0;
+    top:50%;
+    margin-left: 28px;
+    z-index: 19;
+}
+.menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+}
+.menu-btn span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222222;
+    transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+.menu.active {
+    transform: translateX(0);
+    width: 50%;
+}
+.developer-menu{
+    justify-content: flex-end;
+}
+.menu a {
+    list-style-type: none;
+}
+.menu-btn.active span:nth-of-type(1) {
+    display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+}
+.menu nav{
+    background: #F5F5F5;
+    min-height: 740px;
+    padding: 80px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+}
+.menu a{
+    color: #272822;
+    text-decoration: none;
+}
+.nav{
+    position: fixed;
+    right: 0;
+    top:50%;
+    margin-right: 28px;
+}
+.nav-link img{
+    width: 24px;
+    height: 24px;
+    margin-bottom: 26px;
+}
+.nav-list{
+    list-style-type: none;
+}
+img{
+    width: 100% ;
+    height: auto;
+}
+.picture{
+    margin-bottom: 80px;
+}
+main{
+    margin: 80px;
+}
+.wrapper menu-open{
+    padding-left: 30%;
+}
+.name{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #272822;
+    padding-left: 80px;
+}
+.language{
+    display: flex;
+    margin-right: 80px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+.eng{
+    color: #F92672;
+}
+.cards-container{
+    display: flex;
+    position: relative;
+    margin-bottom: 80px;
+}
+.card{
+    width: 50%;
+    min-height: 740px;
+    min-width: 640px;
+    background: #E6DB74;
+}
+.white-card{
+    width: 50%;
+    min-height: 740px;
+    min-width: 640px;
+    background: #F5F5F5;
+}
+.welcome-text{
+    position: absolute;
+    left: calc(50% - 450px);
+    /*top: calc(50%- 100px);*/
+    top:20%;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 94px;
+    color: #272822;
+    width: 900px;
+    z-index: 1;
+}
+.animate__animated.animate__backInDown {
+    --animate-duration: 8s;
+}
+.markup-developer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    width: 100%;
+    background: #E6DB74;
+    min-height: 740px;
+}
+.markup{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 600px;
+    margin-left: 160px;
+}
+.markup p{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #F92672;
+}
+.markup h3{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 21px;
+    color: #000000;
+    margin-top: 30px;
+}
+.markup h4{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 35px;
+    color: #272822;
+    margin-top: 30px;
+}
+.my-skills{
+    margin-bottom: 80px;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #F5F5F5;
+    min-height: 740px;
+    padding: 80px;
+}
+.skills h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 94px;
+    color: #272822;
+}
+.skills h3,h4,h5,h6,h7,h8,h9{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #000000;
+}
+.projects{
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: #353535;
+    min-height: 740px;
+    padding: 80px;
+}
+
+.projects h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 94px;
+    color: #E6DB74;
+}
+.mylib-component{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+.component{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+.github-link{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration-line: underline;
+}
+.github-link a{
+    color: #F92672
+}
+.experience{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #F5F5F5;
+    min-height: 740px;
+    padding: 80px;
+}
+.experience h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 94px;
+    color: #272822;
+}
+.experience h2{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #F92672;
+}
+.experience h3{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 94px;
+    color: #272822;
+}
+.experience a{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration-line: underline;
+    color: #F92672;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: white;
+    width: 100%;
+    padding: 80px;
+}
+.email h2{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #F92672;
+}
+.email a{
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    color: #272822
+}
+.tel a{
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
