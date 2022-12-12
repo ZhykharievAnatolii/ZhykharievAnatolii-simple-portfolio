@@ -1,0 +1,26 @@
+{
+  "name": "anatoliizhykharievportfolio",
+  "version": "2.1.1",
+  "description": "zhykharievanatolii portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhykharievAnatolii/AnatoliiZhykharievPortfolio.git"
+  },
+  "keywords": [
+    "zhykharievanatolii",
+    "portfolio"
+  ],
+  "author": "zhykharievanatolii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZhykharievAnatolii/AnatoliiZhykharievPortfolio/issues"
+  },
+  "homepage": "https://github.com/ZhykharievAnatolii/AnatoliiZhykharievPortfolio#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
